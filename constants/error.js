@@ -1,0 +1,1 @@
+exports.INTERNAL_SERVER_ERROR = "Internal server ERROR!, please try again later.";
