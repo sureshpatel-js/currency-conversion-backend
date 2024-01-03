@@ -3,7 +3,7 @@ const Joi = require("joi");
 exports.validateConversionQuery = async (body) => {
     const schema = Joi.object({
         source: Joi.string().required(),
-        amount: Joi.number().not(0).required(),
+        amount: Joi.number().not(0).max(10000000000).required(),
         target: Joi.string().required(),
     });
     try {
