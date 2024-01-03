@@ -100,7 +100,7 @@ describe("Failing Test Cases -> GET /v1/conversion", () => {
 
     describe("Invalid amount", () => {
 
-        let api = "/v1/conversion?source=BTC&amount=2.1&target=INR";
+        let api = "/v1/conversion?source=BTC&amount=notnumber&target=INR";
 
         test("should respond with a 400 status code", async () => {
             const response = await request(app).get(api).send();
